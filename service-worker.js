@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c98e6b382d496b712828b4e679b3407c.js"
+  "/ounce/precache-manifest.a4d14d42b1dbbfc81e8954cbecb5585d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ounce"});
