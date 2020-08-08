@@ -1,9 +1,9 @@
 module.exports = {
-  // publicPath: "",
+  publicPath: "/ounce/",
   // outputDir: "",
-  pages: {
-    index: {
-      title: 'Ounce ui',
-    }
-  }
+  // pages: {
+  //   index: {
+  //     title: 'Ounce ui',
+  //   }
+  // }
 };
