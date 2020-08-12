@@ -1,28 +1,34 @@
 <template>
-  <div>
-    <label for="o-input-name">{{ label }}</label
-    ><input
-      name="o-input-name"
+  <div :class="className">
+    <label :for="uniqueID">{{ label }}</label>
+    <input
+      :name="uniqueID"
+      :id="uniqueID"
       class="o-input"
       type="text"
       :class="[]"
-      value=""
-      placeholder="Jane Doe"
+      value
+      :placeholder="placeholder"
     />
   </div>
 </template>
 
 <script lang="ts">
-// as "button" | "submit" | "reset"
-// type: "button",
-// size: "small" large | middle | small,
 import { defineComponent } from "vue";
+
+import { genRandomString } from "@/common/tools";
+
 export default defineComponent({
   name: "OInput",
   props: {
+    className: {
+      type: String,
+      require: false,
+    },
     placeholder: {
       type: String,
       require: false,
+      default: "pls enter ...",
     },
     label: {
       type: String,
@@ -39,7 +45,13 @@ export default defineComponent({
     },
     // text: String,
   },
-  //   setup(props) {},
+  // setup(props) {
+  setup() {
+    const uniqueID = `o-input-${genRandomString()}`;
+    return {
+      uniqueID,
+    };
+  },
 });
 </script>
 
@@ -68,6 +80,9 @@ label {
   font-weight: 300;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.75);
+}
+.o-input:focus {
+  border-color: #ffe4b4;
 }
 ::-webkit-input-placeholder {
   /* WebKit browsers */

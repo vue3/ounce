@@ -3,8 +3,9 @@ let path = require('path')
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
+
 module.exports = {
-    publicPath: '/wuhan', //部署应用包时的基本 URL。用法和 webpack 本身的 output.publicPath 一致
+    publicPath: '/ounce', //部署应用包时的基本 URL。用法和 webpack 本身的 output.publicPath 一致
     outputDir: 'dist3', //打包路径地址,Default: 'dist' ,代替 output.path
     assetsDir: 'assets1', //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
     indexPath: 'test.html', //静态模板文件输出的地址
@@ -47,7 +48,7 @@ module.exports = {
     },
     devServer: {
         host: '0.0.0.0',
-        port: '8090',
+        port: '8080',
         https: true,
         // 访问 ： http://localhost:8090/api/info
         // 代理到 http://localhost:8081/api/info
@@ -73,4 +74,5 @@ module.exports = {
 }
 
 // 参考网站：
-//  https://cli.vuejs.org/config/
+// https://cli.vuejs.org/config/
+// https://cli.vuejs.org/zh/config/#vue-config-js
