@@ -1,9 +1,11 @@
 <template>
   <div class="o-table">
-
+     this is table.
   </div>
 </template>
 
 <style scoped>
-.o-table {}
+.o-table {
+    position: relative;
+}
 </style>
